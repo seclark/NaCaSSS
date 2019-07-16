@@ -9,7 +9,7 @@ import sys
 sys.path.insert(0, '../../GalfaCuber/code')
 import galfa_vel_helpers as gvh
 
-    
+
 DR2_slice_root = "/data/seclark/GALFADR2/Wide_maps/"
 outhdr= fits.getheader(DR2_slice_root+"GALFA_HI_W_S1024_V0000.4kms.fits")
 
@@ -21,7 +21,7 @@ count = 0
 
 for _vel in np.arange(958, 1093):
     
-    galfafn = galfaroot+gvh.get_galfa_W_name(_vel)
+    galfafn = DR2_slice_root+gvh.get_galfa_W_name(_vel)
     galfaslice = fits.getdata(galfafn)
     
     gradslice = np.gradient(galfaslice)
