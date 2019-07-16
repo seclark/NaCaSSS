@@ -25,7 +25,7 @@ for _vel in np.arange(958, 1093):
     galfaslice = fits.getdata(galfafn)
     
     gradslice = np.gradient(galfaslice)
-    gradmag = np.sqrt(gradslice[0, :, :]**2 + gradslice[1, :, :]**2)
+    gradmag = np.sqrt(gradslice[0]**2 + gradslice[1]**2)
     
     gradmag_tot += gradmag
     
