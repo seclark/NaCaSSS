@@ -1,9 +1,6 @@
 import numpy as np
-import healpy as hp
 from astropy.io import fits
-from astropy import wcs
-from astropy import units as u
-from astropy.coordinates import SkyCoord
+import copy
 
 import sys
 sys.path.insert(0, '../../GalfaCuber/code')
